@@ -2,5 +2,11 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts",
+    "foundry-devops/src/=lib/foundry-devops/src"
+]
+ffi=true # This allows foundry to run commands directly on the machine. It is recommended to turn it off as much as possible.
+fs_permissions=[{access = "read", path = "./img/"}]
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
